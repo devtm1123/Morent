@@ -1,124 +1,156 @@
-# Morent
-<img width="1377" alt="Screenshot 2024-02-09 at 6 01 50 PM" src="https://github.com/DevTaehong/Morent/assets/71358207/d9b19cc0-c29e-45ec-a80a-91e10b90cca3">
+# Morent 🚗 Car Rental Web Application
 
-![PRs](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=shields)
-[![website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://github.com/DevTaehong/Hipnode)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=shields)
+[![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://morent-zeta.vercel.app/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## 🌐 Demo
-Here is a working live demo: https://morent-zeta.vercel.app/
-https://www.loom.com/share/64be3ad8506e4540a4f61fa83008ad29?sid=907f74a0-5458-493e-a9ba-b6405858875c
+## 📝 Project Overview
 
-## 📝 Description
-Morent is a cutting-edge car rental application developed using Next.js, and MongoDB. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.
+Morent is a modern, full-featured car rental web application designed to simplify the car rental experience. Built with cutting-edge web technologies, the platform allows users to browse, search, and rent cars with ease.
 
+### Key Features
+- 🏠 Dynamic homepage with featured vehicles
+- 🚗 Comprehensive car listing with advanced search and filtering
+- 📋 Detailed car information and image galleries
+- 💳 Integrated Stripe payment processing
+- 👤 User profiles with rental history and favorites
+- 🌟 Car review and rating system
 
-## 🛠️ Setup Project
-To get this project up and running in your development environment, follow these step-by-step instructions.
+## 🌐 Live Demo
 
-### 🍴 Prerequisites
+- **Website**: [https://morent-zeta.vercel.app/](https://morent-zeta.vercel.app/)
+- **Demo Video**: [Loom Walkthrough](https://www.loom.com/share/64be3ad8506e4540a4f61fa83008ad29)
 
-We need to install or make sure that these tools are pre-installed on your machine:
+## 🛠️ Getting Started
 
-- [NodeJS](https://nodejs.org/en/download/): It is a JavaScript runtime build. 
-- [Git](https://git-scm.com/downloads): It is an open-source version control system. 
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18 or later)
+- [npm](https://www.npmjs.com/) (included with Node.js)
+- [Git](https://git-scm.com/)
 
-## ✨ Features
-1. Homepage - Consisting of a banner of highlighted cars to rent, pickup and dropoff pickers, list of vehicles available for rent.
-2. All Cars Page - List of vehicles, search, a sidebar with filtering functionality
-3. Car Details Page - Consisting of additional car details, such as images, title, brand, price, and a list of other recommended cars available for rent.
-4. Add a Car Page - Add car details (images, title, brand, price) through a form. After submission, the car should appear on the home page
-5. Car Rent Page - Clicking on “Rent Now” utilizes Stripe’s payment functionalities and redirects to a Stripe-powered checkout page.
-6. User page - Displays a list of cars rented by the user and cars put for rent by the user.
-7. Payments - Stripe to handle payments
-8. Add Cars to Favorite
+### Installation Steps
 
-## 🔍 Usage
-
-### How To Use
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
+1. Clone the repository
 ```bash
-# Clone this repository
-$ git clone https://github.com/DevTaehong/Morent.git
-
-# Go into the repository
-$ cd Morent
-
-# Install dependencies
-$ npm install 
-
-# Run the app
-$ npm start
+git clone https://github.com/DevTaehong/Morent.git
+cd Morent
 ```
 
-> **Note**
-> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+2. Install dependencies
+```bash
+npm install
+```
 
-### ⚒️ How to Contribute
-Want to contribute? Great!
+3. Set up environment variables
+Create a `.env` file in the project root with the following variables:
+```env
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your_clerk_publishable_key>
+CLERK_SECRET_KEY=<your_clerk_secret_key>
 
-To fix a bug or enhance an existing module, follow these steps:
+# Database Configuration
+DATABASE_URL=<your_mongodb_connection_string>
 
-- Fork the repo
-- Create a new branch (`git checkout -b improve-feature`)
-- Make the appropriate changes in the files
-- Add changes to reflect the changes made
-- Commit your changes (`git commit -am 'Improve feature'`)
-- Push to the branch (`git push origin improve-feature`)
-- Create a Pull Request 
+# Uploadthing
+UPLOADTHING_SECRET=<your_uploadthing_secret>
+UPLOADTHING_APP_ID=<your_uploadthing_app_id>
 
-### 📩 Bug / Feature Request
+# Stripe Integration
+STRIPE_SECRET_KEY=<your_stripe_secret_key>
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=<your_stripe_publishable_key>
+```
 
-If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/devtaehong/hipnode/issues/new) by including your search query and the expected result.
+4. Run the development server
+```bash
+npm run dev
+```
 
-If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/devtaehong/hipnode/issues/new). Please include sample queries and their corresponding results.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## 🔒 ENV file
- ```
-   # Clerk Authentication
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<clerk_publishable_key>
-   CLERK_SECRET_KEY=<clerk_secret_key>
-   WEBHOOK_SECRET=<webhook_secret>
-   
-   # Clerk URLs
-   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
-   
-   # Direct URL and Database URL
-   DIRECT_URL=<direct_url>
-   DATABASE_URL=<database_url>
-   
-   # MongoDB Configuration
-   MONGODB_UR=<mongodb_url>
-   
-   # Uploadthing
-   UPLOADTHING_SECRET=<uploadthing_secret>
-   UPLOADTHING_APP_ID=<uploadthing_app_id>
-  
-   # Stripe API Keys
-   STRIPE_SECRET_KEY=<stripe_secret_key>
-   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=<next_public_stripe_publishable_key>
-   ```
+## 🚀 Deployment
 
-## 📜 Credits
+### Vercel Deployment
+1. Fork the repository
+2. Connect your Vercel account to the GitHub repository
+3. Set the environment variables in the Vercel project settings
+4. Vercel will automatically deploy the main branch
 
-👦 Tye Stanley <br>
-Email: jamesdrysdale84@gmail.com <br>
-GitHub: @JamesDrysdale
+### Docker Deployment
+```bash
+# Build Docker image
+docker build -t morent .
 
-👦 Glen McCallum <br>
-Email: glen.mccallum@live.co.uk <br>
-GitHub: @glenmac90
+# Run Docker container
+docker run -p 3000:3000 morent
+```
 
-👦 Alexander Mc Lachlan <br>
-Email: alexmonk17@gmail.com <br>
-GitHub: @AlexDjangoX
+## 📂 Project Structure
 
+- `app/`: Next.js app directory with routes and pages
+- `components/`: Reusable React components
+- `lib/`: Server actions, models, and utility functions
+- `public/`: Static assets like images and icons
+- `utils/`: Utility functions and helpers
 
-## 📞 Contact Me
+## 🧰 Technologies Used
 
-[![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-taehong-blue?style=flat&logo=linkedin&logoColor=b0c0c0&labelColor=363D44)](https://www.linkedin.com/in/taehong/)
+- **Frontend**: 
+  - Next.js 13
+  - React
+  - TypeScript
+  - Tailwind CSS
+
+- **Backend**:
+  - MongoDB
+  - Mongoose
+  - Clerk (Authentication)
+  - Stripe (Payments)
+
+- **Additional Tools**:
+  - Uploadthing (File uploads)
+  - React Hook Form
+  - Zod (Validation)
+
+## ✨ Feature Highlights
+
+- User Authentication with Clerk
+- Car Listing and Search
+- Detailed Car Information
+- Stripe Payment Integration
+- Favorite Cars
+- User Profile Management
+- Car Rental and Review System
+
+## 🔧 Configuration
+
+- Tailwind CSS configuration in `tailwind.config.js`
+- TypeScript configuration in `tsconfig.json`
+- Environment variables managed via `.env`
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 👥 Credits
+
+- Tye Stanley
+- Glen McCallum
+- Alexander Mc Lachlan
+
+## 📞 Contact
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-taehong-blue?style=flat&logo=linkedin&logoColor=b0c0c0&labelColor=363D44)](https://www.linkedin.com/in/taehong/)
+
+---
+
+**Happy Car Renting with Morent! 🚗✨**
