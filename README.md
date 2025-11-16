@@ -106,7 +106,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ## 📜 Credits
 
-👦 Tye Stanley <br>
+👦 James Drysdale <br>
 Email: jamesdrysdale84@gmail.com <br>
 GitHub: @JamesDrysdale
 
